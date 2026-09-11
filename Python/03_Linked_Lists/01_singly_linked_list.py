@@ -585,62 +585,6 @@ class LinkedList:
             temp = temp.next
 
 
-def get_broadcast_shape(shape1: tuple, shape2:tuple) -> tuple | bool:
-    s1 = LinkedList()
-    s2 = LinkedList()
-
-    for i in shape1:
-        s1.append(i)
-
-    for i in shape2:
-        s2.append(i)
-
-    n = len(s1)
-    m = len(s2)
-
-    if n > m:
-        for i in range(n - m):
-            s2.insert_head(1)
-
-    if n < m:
-            for i in range(m - n):
-                s1.insert_head(1)
-
-    new_shape = []
-    i = 0
-    s1_head = s1.head
-    s2_head = s2.head
-    while i < max(n, m):
-        if s1_head.data == s2_head.data or s1_head.data == 1 or s2_head.data == 1:
-            new_shape.append(max(s1_head.data, s2_head.data))
-
-        else:
-            return '❌ Error: Cannot broadcast'
-
-        s1_head = s1_head.next
-        s2_head = s2_head.next
-        i = i + 1
-
-    
-    return tuple(new_shape)
-
-
-
-shape1 = (4, 3)
-shape2 = (3,)
-shape3 = (15, 3, 5)
-shape4 = (3, 1)
-shape5 = (8, 1, 6, 1)
-shape6 = (7, 1, 5)
-shape7 = (3, 4)
-shape8 = (4, 3)
-
-print(get_broadcast_shape(shape1, shape2))
-print(get_broadcast_shape(shape3, shape4))
-print(get_broadcast_shape(shape5, shape6))
-print(get_broadcast_shape(shape7, shape8))
-
-'''
 # =====================================================================
 # SYSTEM TESTING: SINGLY LINKED LIST
 # =====================================================================
@@ -737,4 +681,4 @@ if __name__ == "__main__":
 
     print("\n🎯 TESTING COMPLETE.")
     print("="*60 + "\n")
-'''
+

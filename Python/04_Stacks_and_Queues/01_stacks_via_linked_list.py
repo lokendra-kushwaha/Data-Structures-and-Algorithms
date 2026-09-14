@@ -321,7 +321,6 @@ def is_balanced_bracket(mathematical_string):
 # =====================================================================
 # SYSTEM TESTING: STACK ALGORITHMS
 # =====================================================================
-"""
 if __name__ == "__main__":
     print("\n" + "="*50)
     print("🚀 STACK ALGORITHMS - INTERVIEW PROBLEMS TEST")
@@ -367,4 +366,4 @@ if __name__ == "__main__":
 
     print("\n🎯 ALL ALGORITHMS TESTED SUCCESSFULLY.")
     print("="*50 + "\n")
-"""
+
